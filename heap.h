@@ -5,8 +5,6 @@
 typedef struct node_t {
     size_t empty;
     size_t size;
-    struct node_t *next;
-    struct node_t *prev;
 } node_t;
 
 typedef struct {
