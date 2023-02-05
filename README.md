@@ -17,8 +17,8 @@
 测试结果：
 
 ``` c
-test_heap_alloc: 95                           // 不带碎片合并的堆分配分配结果
-test_heap_alloc_with_fragment_merge: 139      // 带碎片合并的对分配分配结果
+test_heap_alloc: 95                           // 不带碎片合并的堆分配结果
+test_heap_alloc_with_fragment_merge: 139      // 带碎片合并的堆分配结果
 test_malloc: 95                               // c 自带接口的分配结果
 ```
 
