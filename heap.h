@@ -17,3 +17,5 @@ static size_t heap_node_overhead = sizeof(node_t) + sizeof(footer_t);
 void heap_init();
 void* heap_alloc(size_t size);
 void heap_free(void *);
+void heap_clear();
+void heap_merge_fragment();
