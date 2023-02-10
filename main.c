@@ -1,34 +1,35 @@
 #include "time.h"
 #include "heap.h"
 
+#define break_if_null(x) if(!x) break
 
 void test_heap_alloc() {
     heap_clear();
     int count = 1;
     while (1) {
         void* alloc1 = heap_alloc(4);
-        if (!alloc1) break;
+        break_if_null(alloc1);
         count++;
 
         void* alloc2 = heap_alloc(4);
-        if (!alloc2) break;
+        break_if_null(alloc2);
 
         void* alloc3 = heap_alloc(4);
-        if (!alloc3) break;
+        break_if_null(alloc3);
         count++;
 
         void* alloc4 = heap_alloc(4);
-        if (!alloc4) break;
+        break_if_null(alloc4);
 
         void* alloc6 = heap_alloc(4);
-        if (!alloc6) break;
+        break_if_null(alloc6);
         count++;
 
         heap_free(alloc2);
         heap_free(alloc4);
 
         void* alloc7 = heap_alloc(8);
-        if (!alloc7) break;
+        break_if_null(alloc7);
         count++;
 
         // heap_free(alloc1);
@@ -49,28 +50,28 @@ void test_heap_alloc_with_fragment_merge() {
     int count = 1;
     while (1) {
         void* alloc1 = heap_alloc(4);
-        if (!alloc1) break;
+        break_if_null(alloc1);
         count++;
 
         void* alloc2 = heap_alloc(4);
-        if (!alloc2) break;
+        break_if_null(alloc2);
 
         void* alloc3 = heap_alloc(4);
-        if (!alloc3) break;
+        break_if_null(alloc3);
         count++;
 
         void* alloc4 = heap_alloc(4);
-        if (!alloc4) break;
+        break_if_null(alloc4);
 
         void* alloc6 = heap_alloc(4);
-        if (!alloc6) break;
+        break_if_null(alloc6);
         count++;
 
         heap_free(alloc2);
         heap_free(alloc4);
 
         void* alloc7 = heap_alloc(8);
-        if (!alloc7) break;
+        break_if_null(alloc7);
         count++;
 
         // heap_free(alloc1);

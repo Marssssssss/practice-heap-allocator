@@ -129,7 +129,7 @@ void heap_merge_fragment() {
 void print_all_nodes() {
     node_t *next = heap_head;
     while (next) {
-        printf("node: %u, empty: %d, size: %u\n", (unsigned int) next, next->empty, (unsigned int)next->size);
+        printf("node: 0x%x, empty: %d, size: %u\n", next, next->empty, next->size);
         next = get_next(next);
     }
     printf("\n");
